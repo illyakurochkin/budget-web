@@ -1,3 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@import '@cloudscape-design/global-styles/index.css';*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +22,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.card-shadow {
+  box-shadow: 4px 4px 20px #54ACD2;
+}
+
+.button-shadow:hover {
+  box-shadow: 4px 4px 20px #54ACD2;
+}
+
+.button-shadow:active {
+  box-shadow: none;
 }

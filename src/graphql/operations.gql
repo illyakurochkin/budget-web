@@ -1,0 +1,56 @@
+fragment Source on SourceEntity {
+    id
+    name
+    amount
+    tags
+    currency
+    dominance
+    amountInUSD
+    date
+}
+
+fragment Block on BlockEntity {
+    id
+    date
+    amount
+    amountInUSD
+    createdAt
+    currency
+    sourceId
+    updatedAt
+}
+
+query GetSources {
+    sources: getSources {
+        ...Source
+    }
+}
+
+query GetChat($input: ChartInput!) {
+    chart: getChart(input: $input) {
+        date
+        value
+    }
+}
+
+mutation SignIn($message: String!) {
+    signIn(message: $message) {
+        accessToken
+    }
+}
+
+mutation DeleteSource($sourceId: ID!) {
+    deleteSource(sourceId: $sourceId)
+}
+
+mutation EditSource($sourceId: ID!, $input: UpdateSourceInput!) {
+    updateSource(sourceId: $sourceId, input: $input) {
+        ...Source
+    }
+}
+
+mutation RefreshSource($input: CreateBlockInput!) {
+    createBlock(input: $input) {
+        ...Block
+    }
+}

@@ -1,0 +1,15 @@
+overwrite: true
+schema: '../budget-api/apps/api/generated/schema.gql'
+generates:
+  src/graphql/generated.ts:
+    documents: 'src/graphql/operations.gql'
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withComponent: false
+      withHOC: false
+
+
