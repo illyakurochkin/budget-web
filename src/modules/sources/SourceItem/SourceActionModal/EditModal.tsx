@@ -19,8 +19,7 @@ export const EditModal = () => {
 
   return (
     <Modal onClose={resetAction}>
-      Edit Source - "{selectedSource.name}"
-
+      <span>Edit Source - "{selectedSource.name}"</span>
       <Button onClick={handleSubmit} loading={loading}>
         Confirm Editing
       </Button>

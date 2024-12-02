@@ -9,6 +9,7 @@ declare global {
 const isInstalled = Boolean(window.ethereum);
 
 const signMessage = async (message: string) => {
+  console.log('message', message);
   if(!window.ethereum) throw new Error('metamask not installed');
 
   const accounts = await window.ethereum?.request({

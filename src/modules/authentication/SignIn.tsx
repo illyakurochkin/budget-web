@@ -11,6 +11,7 @@ export const SignIn = () => {
     try {
       await signIn();
     } catch (error: any) {
+        console.log(error)
       // if (error.code === 4001) alert
       setLoading(false);
     }
